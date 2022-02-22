@@ -21,18 +21,35 @@
                 <!-- Modal -->
                 <form id="form">
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header text-white" style="background-color: #1F1D36; border-color: #3F3351">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                    <h5 class="modal-title" id="staticBackdropLabel">Insira um mangá: </h5>
                                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body text-white" style="background-color: #3F3351;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label class="form-label">Nome do mangá: </label>
+                                            <input class="form-control col-6" type="text" name="manga" placeholder="Ex: One Piece" aria-label="input manga">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label class="form-label">Volumes que você possui: </label>
+                                            <input class="form-control col-6" type="text" name="volume_possuido" placeholder="Ex: 1, 2, 3..." aria-label="input manga">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label">Último volume lançado: </label>
+                                            <input class="form-control col-6" type="text" name="volume_atual" placeholder="Ex: 101" aria-label="input manga">
+                                        </div>
+                                    </div>
                                 </div>
+                                
                                 <div class="modal-footer" style="background-color: #3F3351; border-color: #6e6e6e">
                                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-outline-light">Understood</button>
+                                    <button type="button" onclick="saveManga()" class="btn btn-outline-light">Understood</button>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +171,9 @@
                     <?php
 
                     }
-
+                    
+                    mysqli_close($conn);
+                    
                     ?>
                 </div>
             </div>
@@ -163,7 +182,7 @@
 
         </body>
         <script>
-        function saveCadastro(){
+        function saveManga(){
         $.ajax({
             url: "services/saveManga.php",
             type: "POST",
