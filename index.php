@@ -31,25 +31,25 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <label class="form-label">Nome do mangá: </label>
-                                            <input class="form-control col-6" type="text" name="manga" placeholder="Ex: One Piece" aria-label="input manga">
+                                            <input class="form-control col-6" type="text" name="manga" placeholder="Ex: One Piece" aria-label="input manga" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-6">
                                             <label class="form-label">Volumes que você possui: </label>
-                                            <input class="form-control col-6" type="text" name="volume_possuido" placeholder="Ex: 1, 2, 3..." aria-label="input manga">
+                                            <input class="form-control col-6" type="text" name="volume_possuido" placeholder="Ex: 1, 2, 3..." aria-label="input manga" required>
                                         </div>
                                         <div class="col-6">
                                             <label class="form-label">Último volume lançado: </label>
-                                            <input class="form-control col-6" type="text" name="volume_atual" placeholder="Ex: 101" aria-label="input manga">
+                                            <input class="form-control col-6" type="text" name="volume_atual" placeholder="Ex: 101" aria-label="input manga" required>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <div class="modal-footer" style="background-color: #3F3351; border-color: #6e6e6e">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" onclick="saveManga()" class="btn btn-outline-light">Understood</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="submit" onclick="saveManga()" class="btn btn-outline-light">Adicionar</button>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +189,6 @@
             dataType: "text",
             data: $('#form').serialize(),
             success: function(response){
-                $('.cadastrado').show();
             }
         })
         }
