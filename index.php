@@ -12,15 +12,40 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Mangás Faltando</title>
         </head>
+
         <body>
             <div class="container">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ADICIONAR MANGÁ</button><br>
+                </div>
+                <!-- Modal -->
+                <form id="form">
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header text-white" style="background-color: #1F1D36; border-color: #3F3351">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-white" style="background-color: #3F3351;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                </div>
+                                <div class="modal-footer" style="background-color: #3F3351; border-color: #6e6e6e">
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-outline-light">Understood</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- Fim Modal -->
                 <div class="row row-cols-1 row-cols-md-3 g-4 center">
                     <?php
 
                     //Query para selcionar todos os mangás e seus respectivos ultimos volumes
                     $query = "SELECT manga, ultimo_volume FROM volumes_atual order by manga;";
                     $result = mysqli_query($conn, $query);
-                    
+
                     $possuidos = [1, 2, 3];
 
                     //while para colocar os mangas e seus ultimos volumes em um array
@@ -134,6 +159,20 @@
                 </div>
             </div>
 
-        </body>
 
+
+        </body>
+        <script>
+        function saveCadastro(){
+        $.ajax({
+            url: "services/saveManga.php",
+            type: "POST",
+            dataType: "text",
+            data: $('#form').serialize(),
+            success: function(response){
+                $('.cadastrado').show();
+            }
+        })
+        }
+        </script>
         </html>
