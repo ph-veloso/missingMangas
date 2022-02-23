@@ -1,7 +1,5 @@
 # Missing Mangas
 
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
-
 ![GitHub repo size](https://img.shields.io/github/repo-size/ph-veloso/missingMangas?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/ph-veloso/missingMangas?style=for-the-badge)
 
@@ -15,11 +13,18 @@ A página tem como função facilitar o controle sobre mangás que estão faltan
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Tarefa 1
-- [x] Tarefa 2
-- [x] Tarefa 3
-- [ ] Tarefa 4
-- [ ] Tarefa 5
+- [x] Criar Layout inicial da página
+- [x] Criação do banco de dados
+- [x] Lógica para buscar itens do banco
+- [x] Lógica para pegar todos os volumes disponíveis do mangá
+- [x] Chamada de API para colocar automaticamente a imagem do mangá baseado no nome inserido
+- [x] Lógica para gerar cards com as imagens, nomes, e volumes faltantes do mangá
+- [x] Botão para usuário inserir o mangá, volume atual, e volumes que ele possui
+- [ ] Adicionar UPDATE de volumes possúidos e volume atual dos mangás já inseridos
+- [ ] Pegar os volumes possuidos e fazer a lógica de volumes faltando
+- [ ] Analisar e possivelmente reestruturar o banco de dados
+- [ ] Arrumar o layout
+- [ ] Adicionar funcionalidade que impeça de adicionar mangás já adicionados
 
 ## ✍ Feito Com:
 [![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/pt-br/windows/get-windows-10)
