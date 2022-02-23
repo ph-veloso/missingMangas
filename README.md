@@ -5,7 +5,7 @@
 
 ## 💻 Funcionalidade
 
-A página tem como função facilitar o controle sobre mangás que estão faltando na coleção. A ideia veio através da necessidade e vontade de divulgar para outros colecionadores/vendedores os itens faltantes. É uma ideia bem simples, possível de ser feita em excel, porém achei uma boa ideia, e com lógicas bem legais de realizar em um website para estudar.
+A página tem como função facilitar o controle sobre mangás que estão faltando na coleção. A ideia veio através da necessidade e vontade de divulgar para outros colecionadores/vendedores os itens faltantes. É uma ideia bem simples, possível de ser feita em excel, porém achei uma boa ideia de realizar em um website como forma de estudo.
 
 
 
